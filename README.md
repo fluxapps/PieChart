@@ -1,4 +1,6 @@
-# PieChart
+# PieChart Library for ILIAS Plugins
+
+ILIAS Pie Chart UI Component
 
 ## Usage
 
