@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.3]
+- Add `examples` link in readme
+
 ## [1.0.2]
 - Update keywords
 
