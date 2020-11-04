@@ -1,6 +1,7 @@
 {
   "name": "srag/piechart",
   "description": "ILIAS Pie Chart UI Component",
+  "version": "1.0.4",
   "type": "library",
   "keywords": [
     "ILIAS",
