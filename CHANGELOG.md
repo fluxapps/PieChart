@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.4]
+- auto_version_tag_ci
+
 ## [1.0.3]
 - Add `examples` link in readme
 
