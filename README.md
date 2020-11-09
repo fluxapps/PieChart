@@ -22,7 +22,7 @@ First add the following to your `composer.json` file:
 
 And run a `composer install`.
 
-See [examples](./doc/examples) how to use this library
+See [examples](./examples) how to use this library
 
 If you deliver your plugin, the plugin has it's own copy of this library and the user doesn't need to install the library.
 
