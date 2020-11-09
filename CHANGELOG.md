@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.0]
+- Generate readme
+
 ## [1.0.4]
 - auto_version_tag_ci
 
