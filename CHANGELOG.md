@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.0]
+- Revert generate readme and auto_version_tag_ci
+
 ## [1.1.1]
 - Generate readme
 

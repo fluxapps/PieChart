@@ -1,14 +1,6 @@
 {
   "name": "srag/piechart",
   "description": "ILIAS Pie Chart UI Component",
-  "version": "1.1.1",
-  "extra": {
-    "ilias_plugin": {
-      "ilias_min_version": "5.4.0",
-      "ilias_max_version": "6.999"
-    },
-    "generate_plugin_readme_template": "SRAG_ILIAS_LIBRARY"
-  },
   "type": "library",
   "keywords": [
     "ILIAS",
@@ -33,9 +25,6 @@
   "require": {
     "php": ">=7.2"
   },
-  "require-dev": {
-    "srag/generateplugininfoshelper": ">=0.1.0"
-  },
   "autoload": {
     "psr-4": {
       "srag\\PieChart\\": "src/"
@@ -45,10 +34,5 @@
     "classmap-authoritative": true,
     "optimize-autoloader": true,
     "sort-packages": true
-  },
-  "scripts": {
-    "generate-plugin-readme": [
-      "srag\\GeneratePluginInfosHelper\\GeneratePluginReadme::generatePluginReadme"
-    ]
   }
 }
