@@ -68,6 +68,20 @@ interface PieChart extends Component
 
 
     /**
+     * @param bool $state
+     *
+     * @return self
+     */
+    public function withReverseLegend(bool $state) : self;
+
+
+    /**
+     * @return bool
+     */
+    public function isReverseLegend() : bool;
+
+
+    /**
      * @param float|null $custom_total_value
      *
      * @return self
