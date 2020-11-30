@@ -34,6 +34,10 @@ class PieChart implements PieChartInterface
     /**
      * @var bool
      */
+    private $reverseLegend = false;
+    /**
+     * @var bool
+     */
     private $showLegend = true;
     /**
      * @var float|null
@@ -174,5 +178,27 @@ class PieChart implements PieChartInterface
     public function getCustomTotalValue() : ?float
     {
         return $this->customTotalValue;
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function withReverseLegend(bool $state): PieChartInterface
+    {
+        $this->checkBoolArg("state", $state);
+        $clone = clone $this;
+        $clone->reverseLegend = $state;
+
+        return $clone;
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function isReverseLegend(): bool
+    {
+        return $this->reverseLegend;
     }
 }

@@ -28,7 +28,15 @@ class LegendEntry implements LegendEntryInterface
     /**
      * @var float
      */
+    private $y_percentage_reversed;
+    /**
+     * @var float
+     */
     private $text_y_percentage;
+    /**
+     * @var float
+     */
+    private $text_y_percentage_reversed;
     /**
      * @var float
      */
@@ -69,6 +77,7 @@ class LegendEntry implements LegendEntryInterface
         $topMargin = (1 - $range) / 2;
 
         $this->y_percentage = ($topMargin + ($index * ($range / ($numSections + 1)))) * 100;
+        $this->y_percentage_reversed = 100 - $this->y_percentage;
     }
 
 
@@ -81,9 +90,11 @@ class LegendEntry implements LegendEntryInterface
         if ($numSections >= 10) {
             $this->square_size = 1.5;
             $this->text_y_percentage = $this->y_percentage + 4;
+            $this->text_y_percentage_reversed = 100 - $this->y_percentage + 4;
         } else {
             $this->square_size = 2;
             $this->text_y_percentage = $this->y_percentage + 4.5;
+            $this->text_y_percentage_reversed = 100 - $this->y_percentage + 4.5;
         }
 
         $this->text_size = 1.5;
@@ -132,5 +143,16 @@ class LegendEntry implements LegendEntryInterface
     public function getTitle() : string
     {
         return $this->title;
+    }
+
+    public function getReversedTextYPercentage(): float
+    {
+        return $this->text_y_percentage_reversed;
+    }
+
+
+    public function getReversedYPercentage(): float
+    {
+        return $this->y_percentage_reversed;
     }
 }

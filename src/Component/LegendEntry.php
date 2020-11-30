@@ -21,11 +21,26 @@ interface LegendEntry
 
 
     /**
+     * Get the reversed y percentage in which this should be displayed inside the SVG
+     *
+     * @return float
+     */
+    public function getReversedYPercentage() : float;
+
+
+    /**
      * Get the x percentage in which this should be displayed inside the SVG
      *
      * @return float
      */
     public function getTextYPercentage() : float;
+
+    /**
+     * Get the reversed x percentage in which this should be displayed inside the SVG
+     *
+     * @return float
+     */
+    public function getReversedTextYPercentage() : float;
 
 
     /**

@@ -60,8 +60,13 @@ class Renderer extends AbstractComponentRenderer
             foreach ($component->getSections() as $section) {
                 $tpl->setCurrentBlock("legend");
                 $tpl->setVariable("SECTION_COLOR", $section->getColor()->asHex());
-                $tpl->setVariable("LEGEND_Y_PERCENTAGE", $section->getLegendEntry()->getYPercentage());
-                $tpl->setVariable("LEGEND_TEXT_Y_PERCENTAGE", $section->getLegendEntry()->getTextYPercentage());
+                if ($component->isReverseLegend()) {
+                    $tpl->setVariable("LEGEND_Y_PERCENTAGE", $section->getLegendEntry()->getReversedYPercentage());
+                    $tpl->setVariable("LEGEND_TEXT_Y_PERCENTAGE", $section->getLegendEntry()->getReversedTextYPercentage());
+                } else {
+                    $tpl->setVariable("LEGEND_Y_PERCENTAGE", $section->getLegendEntry()->getYPercentage());
+                    $tpl->setVariable("LEGEND_TEXT_Y_PERCENTAGE", $section->getLegendEntry()->getTextYPercentage());
+                }
                 $tpl->setVariable("LEGEND_FONT_SIZE", $section->getLegendEntry()->getTextSize());
                 $tpl->setVariable("RECT_SIZE", $section->getLegendEntry()->getSquareSize());
 
