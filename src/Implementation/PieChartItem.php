@@ -51,10 +51,6 @@ class PieChartItem implements PieChartItemInterface
         $this->checkFloatArg("value", $value);
         $this->checkArgInstanceOf("color", $color, Color::class);
 
-        if (strlen($name) > self::MAX_TITLE_CHARS) {
-            throw new InvalidArgumentException(self::ERR_TOO_MANY_CHARS);
-        }
-
         $this->name = $name;
         $this->value = $value;
         $this->color = $color;

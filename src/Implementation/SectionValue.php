@@ -78,7 +78,7 @@ class SectionValue implements SectionValueInterface
         if ($section_percentage <= 7) {
             $this->text_size = 0;
         } else {
-            $this->text_size = 3;
+            $this->text_size = 2;
         }
     }
 
