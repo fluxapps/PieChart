@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.1]
+- Downscale default section value text size
+- Remove 35 character section name limit exception
+- Add option to set section character name limit
+
 ## [1.3.0]
 - Implement reverse legend entries option
 

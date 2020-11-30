@@ -43,6 +43,10 @@ class PieChart implements PieChartInterface
      * @var float|null
      */
     private $customTotalValue = null;
+    /**
+     * @var int
+     */
+    private $customPieChartItemNameLimit = 0;
 
 
     /**
@@ -200,5 +204,21 @@ class PieChart implements PieChartInterface
     public function isReverseLegend(): bool
     {
         return $this->reverseLegend;
+    }
+
+
+    public function withCustomPieChartItemNameLimit(int $state): PieChartInterface
+    {
+        $this->checkIntArg("state", $state);
+        $clone = clone $this;
+        $clone->customPieChartItemNameLimit = $state;
+
+        return $clone;
+    }
+
+
+    public function isCustomPieChartItemNameLimit(): int
+    {
+        return $this->customPieChartItemNameLimit;
     }
 }

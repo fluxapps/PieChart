@@ -14,10 +14,6 @@ use ILIAS\Data\Color;
 interface PieChartItem
 {
 
-    const MAX_TITLE_CHARS = 35;
-    const ERR_TOO_MANY_CHARS = "More than " . self::MAX_TITLE_CHARS . " characters in the title";
-
-
     /**
      * Get the title of a pre-section
      *

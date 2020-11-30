@@ -70,10 +70,14 @@ class Renderer extends AbstractComponentRenderer
                 $tpl->setVariable("LEGEND_FONT_SIZE", $section->getLegendEntry()->getTextSize());
                 $tpl->setVariable("RECT_SIZE", $section->getLegendEntry()->getSquareSize());
 
-                if ($component->isValuesInLegend()) {
-                    $section_name = sprintf($section->getName() . " (%s)", $section->getValue()->getValue());
+                if ($component->isCustomPieChartItemNameLimit() !== 0) {
+                    $section_name = substr($section->getName(), 0, $component->isCustomPieChartItemNameLimit());
                 } else {
                     $section_name = $section->getName();
+                }
+
+                if ($component->isValuesInLegend()) {
+                    $section_name = sprintf($section_name . " (%s)", $section->getValue()->getValue());
                 }
 
                 $tpl->setVariable("SECTION_NAME", $section_name);

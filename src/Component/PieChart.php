@@ -93,4 +93,21 @@ interface PieChart extends Component
      * @return float|null
      */
     public function getCustomTotalValue() : ?float;
+
+
+    /**
+     * Forces PieChartItems to only display a certain amount of characters.
+     * Exception: 0 = No limit
+     *
+     * @param int $state
+     *
+     * @return self
+     */
+    public function withCustomPieChartItemNameLimit(int $state) : self;
+
+
+    /**
+     * @return int
+     */
+    public function isCustomPieChartItemNameLimit() : int;
 }
