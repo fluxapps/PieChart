@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.3.2]
+- Remove max items limit
+
 ## [1.3.1]
 - Downscale default section value text size
 - Remove 35 character section name limit exception

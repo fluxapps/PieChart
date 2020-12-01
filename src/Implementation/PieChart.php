@@ -58,10 +58,6 @@ class PieChart implements PieChartInterface
     {
         if (count($pieChartItems) === 0) {
             throw new InvalidArgumentException(self::ERR_NO_ITEMS);
-        } else {
-            if (count($pieChartItems) > self::MAX_ITEMS) {
-                throw new InvalidArgumentException(self::ERR_TOO_MANY_ITEMS);
-            }
         }
 
         $this->calcTotalValue($pieChartItems);
