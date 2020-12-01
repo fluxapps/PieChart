@@ -14,9 +14,7 @@ use ILIAS\UI\Component\Component;
 interface PieChart extends Component
 {
 
-    const MAX_ITEMS = 12;
     const ERR_NO_ITEMS = "Empty array supplied as argument";
-    const ERR_TOO_MANY_ITEMS = "More than " . self::MAX_ITEMS . " Pie Chart Items supplied";
 
 
     /**
